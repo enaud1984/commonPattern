@@ -1,0 +1,49 @@
+{
+	"debug": {
+		"write_operations": false,
+		"print": true,
+		"timing_and_profile": true
+	},
+	"app": {
+		"name": "app_name",
+		"code" : -1,
+		"exit_code" : 0,
+		"validity_minutes": 5,
+		"continue_if_except" : false,
+		"stop_and_continue_if_except": false,
+		"createhivetable": false,
+		"readdata_threaded" : false,
+		"builddataframe_threaded": false,
+		"writedatatohdfs_threaded": false,
+		"builddataframe_union": false,
+		"builddataframe_union_limit_df_size": -1,
+		"writedatatohive_threaded": false,
+		"writedatatodb_threaded" : false,
+		"max_pool_thread" : 3,
+		"db_logger": true,
+		"init_spark": true
+	},
+	"db": {
+		"type": "ORACLE",
+		"host" : "10.64.20.10",
+		"port" : "1521",
+		"service" : "dssdbsvi",
+		"schema" : "GEODSS_TEST",
+		"driver" : "oracle.jdbc.driver.OracleDriver",
+		"user" : "GEODSS_TEST",
+		"password" : "EndpointS3cur1t1",
+		"jar_filepath" : "/opt/oracle/12.1/client64/lib/ojdbc6.jar",
+		"log_table" : "GEODSS_TEST.LOG"
+	},
+	"hdfs": {
+		"url": "http://10.11.19.113:50070",
+		"username": "rsm__admin000"
+	},
+	"hive": {
+		"db": "data_raw",
+		"file_format": "orc"
+	},
+	"log": {
+		"local_folder": "/tmp"
+	}
+}
